@@ -1,0 +1,175 @@
+\documentclass[11pt, a4paper]{article} 
+
+\usepackage[T1]{fontenc}     % We are using pdfLaTeX,
+\usepackage[utf8]{inputenc}  % hence this preparation
+\usepackage[british, russian]{babel}  
+\usepackage[left = 0mm, right = 0mm, top = 0mm, bottom = 0mm]{geometry}
+\usepackage[stretch = 25, shrink = 25, tracking=true, letterspace=30]{microtype}  
+\usepackage{graphicx}        % To insert pictures
+\usepackage{xcolor}          % To add colour to the document
+\usepackage{marvosym}        % Provides icons for the contact details
+\usepackage{fontawesome5}
+
+\usepackage{enumitem}        % To redefine spacing in lists
+\setlist{parsep = 0pt, topsep = 0pt, partopsep = 1pt, itemsep = 1pt, leftmargin = 6mm}
+
+\usepackage{nimbussans}
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{cvblue}{HTML}{304263}
+
+%%%%%%% USER COMMAND DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These are the real workhorses of this template
+\newcommand{\dates}[1]{\hfill\mbox{\textbf{#1}}} % Bold stuff that doesn’t got broken into lines
+\newcommand{\is}{\par\vskip.3ex plus .4ex} % Item spacing
+\newcommand{\smaller}[1]{{\small$\diamond$\ #1}}
+\newcommand{\normal}[1]{{\normalsize$\diamond$\ #1}}
+\newcommand{\headleft}[1]{\vspace*{2ex}\textsc{\textbf{#1}}\par%
+	\vspace*{-1.5ex}\hrulefill\par\vspace*{0.7ex}}
+\newcommand{\headright}[1]{\vspace*{2.5ex}\textsc{\Large\color{cvblue}#1}\par%
+	\vspace*{-2ex}{\color{cvblue}\hrulefill}\par}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref}
+
+\begin{document}
+	
+	% Style definitions -- killing the unnecessary space and adding the skips explicitly
+	\setlength{\topskip}{0pt}
+	\setlength{\parindent}{0pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\fboxsep}{0pt}
+	\pagestyle{empty}
+	\raggedbottom
+	
+	\begin{minipage}[t]{0.33\textwidth} %% Left column -- outer definition
+		%  Left column -- top dark rectangle
+		\colorbox{cvblue!90}{\color{white}  %% LEFT BOX
+			\kern0.09\textwidth\relax% Left margin provided explicitly
+			\begin{minipage}[t][297mm][t]{0.82\textwidth}
+				\raggedright
+				\vspace*{2ex} % Extra space after the picture
+				% Centering without extra vertical spacing
+				\null\hfill\includegraphics[height=1\textwidth]{avatar.jpeg}\hfill\null
+
+				
+				\vspace*{1.5ex}
+				
+				\Large  \textbf{Юлия Метель} \normalsize 
+				
+				\vspace*{1.5ex}
+				
+				Senior QA | Python | Web | API
+				
+				\headleft{Контакты}
+				\vspace*{1ex}
+				\begin{tabular}{ @{}c l }
+					\Letter\ & \href{mailto:YuliaMetel@yandex.ru?subject=Job Opportunity}{YuliaMetel@yandex.ru} \\
+					\faLinkedin\ & \href{https://www.linkedin.com/in/iuliia-metel}{iuliia-metel} \\
+					\faMobile*\ & \href{tel:+7 999 965 64 13}{\raisebox{0.2ex}{+}7 999 965 64 13} \\
+					\faGithub\ & \href{https://github.com/JuliaMetel}{JuliaMetel} \\
+				\end{tabular}
+				
+				\headleft{Языки}
+				\vspace*{1ex}
+				Русский: \textbf{Родной} \\[2pt]
+				Английский: \textbf{Intermediate (B1), опыт устной и письменной коммуникации} \\[2pt]
+				Испанский: \textbf{A2, базовый уровень}
+				
+				
+				\headleft{Навыки}
+				\vspace*{1ex}
+				\normal{Python | pyTest | Playwright} \\[1pt]
+				\normal{GIT | CI | Github Actions} \\[1pt]
+				\normal{SQL | Bash} \\[1pt]
+				\normal{Docker | Docker Compose} \\[1pt]
+				\normal{Тест дизайн | Postman | Charles} \\[1pt]
+				\normal{DevTools | HTTP/S | REST}
+				
+								
+				\headleft{Образование}
+				\vspace*{1ex}
+				\textbf{Магистр Прикладной математики и информатики} \\[1pt]
+				\vspace*{1ex} 
+				\small
+				Национальный исследовательский ядерный университет МИФИ, 2017–2019 \\[1pt]
+				\normalsize
+				\textbf{Бакалавр Прикладной математики и информатики} \\[1pt]
+				\small
+				Национальный исследовательский ядерный университет МИФИ, 2013–2017 \\[1pt]
+				\normalsize
+			\end{minipage}%
+			\kern0.09\textwidth\relax%%Right margin provided explicitly to stretch the colourbox
+		}
+	\end{minipage}% Right column
+	\hskip2.5em% Left margin for the white area
+	\begin{minipage}[t]{0.56\textwidth}
+		
+		\setlength{\parskip}{0.5ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
+		
+		\headright{Обо мне}		
+		Senior QA-инженер с опытом тестирования веб-приложений и API в B2B и B2C-среде. Работала как в распределённых командах, так и в роли единственного QA-инженера. Уверенно взаимодействую с разработкой, аналитиками и бизнесом.
+		
+		
+		\headright{Опыт работы}
+		
+		\textbf{Саморазвитие} в \textbf{Дома}  \dates{Декабрь 2024 – Настоящее время}
+		
+		\is
+		\smaller{Переписала автотестовый фреймворк с Selenium на Playwright}
+		\is
+		\smaller{Разработала механизм логгирования вызовов функций и блоков, включающий запоминание параметров функций, ошибок и вложенных элементов}
+		\is
+		\smaller{Спроектировала небольшое приложение с постоянным кешем между контейнерами (с помощью Flask и Docker volume) и закрытой базой данных (с помощью отдельной подсети)}
+		\is
+		\smaller{Настроила CI/CD с линтерами и автотестами (PyTest, GitHub Actions — это резюме собрано с помощью GitHub Actions)}
+		\is
+		\vspace*{1ex}
+		\small{\textbf{Ключевые навыки:} Python | Playwright | PyTest | Github Actions | GIT | Docker | Docker Compose}
+		\headright{}
+		
+		\textbf{QA} в \textbf{VK}  \dates{Август 2024 – Ноябрь 2024}
+		\vspace*{0.5ex}
+		\is
+		\textbf{\textit{Веб-приложение VK Турниры}}
+		\is
+		\smaller{Тестирование фронтенда — дизайн, логика, взаимодействие с бекендом}
+		\is
+		\smaller{Тестирование бекенда — логика приложения, тестирование API с помощью Postman}
+		\is
+		\smaller{Создание моков с помощью Charles}
+		\is
+		\smaller{Ведение тестовой документации и разработка тест-стратегии}
+		\is
+		\vspace*{1ex}
+		\small{\textbf{Ключевые навыки:} Web | API | HTTP/S | REST | Postman | Charles | Тест дизайн | Jira}
+		\headright{}
+		
+		\textbf{Релокация и обучение}  \dates{Сентябрь 2022 – Август 2024}
+		\is
+		\small{в Испания | Армения} 
+		\headright{}
+		
+		\textbf{Senior QA Tester} \dates{Сентябрь 2020 – Февраль 2022}
+		\is
+		в \textbf{ООО «СК „Ренессанс Жизнь“»} 
+		\vspace*{0.5ex}
+		\is
+		\textbf{\textit{Личный кабинет клиента / Автоматизация страховых выплат}}
+		\is
+		\smaller{Проводила ручное и интеграционное тестирование систем страхования (Frontend, Backend, 1С, Oracle)}
+		\is
+		\smaller{Проводила приемочное тестирование с заказчиком}
+		\is
+		\smaller{Участвовала в планировании спринтов, ретроспективах и управлении качеством}
+		\is
+		\smaller{Наставляла младших QA и участвовала в формировании продуктовой аналитики}
+		\is
+		\vspace*{1ex}
+		\small{\textbf{Ключевые навыки:} Web | API | SQL | HTTP/S | REST | Postman | Charles | TestIT | Тест дизайн | Jira}
+		\headright{}
+
+	\end{minipage}
+	
+	
+\end{document}
