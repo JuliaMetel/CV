@@ -23,3 +23,13 @@ jobs:
           with:
             name: PDF
             path: russian-cv.pdf
+        - name: Compile LaTeX English document
+          uses: xu-cheng/latex-action@v3
+          with:
+            root_file: english-cv.tex
+        - name: Upload PDF English file
+          uses: actions/upload-artifact@v4
+          id: artifact-upload-step-2
+          with:
+            name: EnglishPDF
+            path: english-cv.pdf
